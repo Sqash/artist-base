@@ -10,4 +10,5 @@
 angular.module('artistBaseApp')
   .controller('GalleryCtrl', function ($scope, $routeParams) {
     $scope.title = 'Works for Sale';
+    console.log($routeParams.title);
   });

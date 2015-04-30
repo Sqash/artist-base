@@ -11,7 +11,11 @@
     },
     {
       "title": "Works for Sale",
-      "link": "/gallery-fs"
+      "link": "/gallery/for-sale"
+    },
+    {
+      "title": "Exhibit",
+      "link": "/gallery/exhibit"
     }
   ],
   "branding": "artistBase",
