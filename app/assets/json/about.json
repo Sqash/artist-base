@@ -1,0 +1,20 @@
+{
+  "content": "This can be a super long description string full of anything you want! Even HTML I'm pretty sure. It describes you in more detail for people who want to know about you and what you do.",
+  "events": [
+    {
+      "title": "Example1",
+      "description": "We're heading to the moon!",
+      "link": "",
+      "linktext": "Check the event out"
+    },
+    {
+      "title": "Example2",
+      "description": "Making a satelite tour on the way back!"
+    },
+    {
+      "description": "Check out a twitter war at",
+      "link": "http://twitter.com/#fuckthoseguys",
+      "linktext": "#fuckthoseguys"
+    }
+  ]
+}

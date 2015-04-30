@@ -1,0 +1,18 @@
+<div ng-controller="SidebarCtrl">
+  <div class="row-offcanvas row-offcanvas-left" ng-class="{active: sidebarActive}">
+    <div id="sidebar" class="sidebar-offcanvas">
+      <div class="col-xs-12">
+        <h4>Upcoming Stuff!</h4>
+        <ul>
+          <li ng-repeat="i in awesomeThings">{{i}}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <p>
+    <button type="button" class="btn btn-default btn-xs"
+      ng-click="sidebarActive=!sidebarActive">
+    <span class="glyphicon glyphicon-chevron-right"></span>
+    </button>
+  </p>
+</div>

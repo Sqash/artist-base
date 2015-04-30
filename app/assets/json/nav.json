@@ -1,0 +1,19 @@
+{
+  "menuItems":
+  [
+    {
+      "title": "Home",
+      "link": "/"
+    },
+    {
+      "title": "About",
+      "link": "/about"
+    },
+    {
+      "title": "Works for Sale",
+      "link": "/gallery-fs"
+    }
+  ],
+  "branding": "artistBase",
+  "brandIsImage": false
+}

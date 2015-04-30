@@ -1,0 +1,25 @@
+/*This probably isn't breaking anything */
+#appContent {
+  min-height: 100%;
+  position: relative;
+}
+
+.footer {
+  border-top: 2px dashed #AAA;
+  position: absolute;
+  height: 5rem;
+  width: 100%;
+  bottom: 0;
+}
+
+.footer .container {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -moz-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+.footer p {
+  margin: 10px 0;
+}
