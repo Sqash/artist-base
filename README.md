@@ -23,13 +23,21 @@ mobile-friendly.
 Instructions on how to take this and make your very own copy for your very own
 works are under the heading //TODO later in this document
 
+##IMPORTANT NOTE
+
+This app is not yet at version 1.0.0 which means it is incomplete and (in my
+opinion) not ready for consumption. Should be fully ready by mid May (2015) so
+check back!
+
 ##Authorship
 
-This base app was written by [https://github.com/sqash11](Sam Whiteley)
+This app was written by [Sam Whiteley](https://github.com/sqash)
 
 ##License
 
-GPL-2.0, so long as you're allowed to sell things from such a code base.
+GPL-2.0
+
+See the file `LICENSE` for full license
 
 ## Left off at (notes for me):
 
@@ -39,14 +47,18 @@ then it's on to making all of that populate from a json resource file.
 
 ## //TODO (notes for me)
 
-- Carousel galleries
+1. Carousel galleries
   - Determine whether ng or bootstrap.
   - Make it a component/service.
 
-- Paypal hooks
+2. Paypal hooks
 
-- Script to unpack /dist into top level dir for github pages project. (grunt
+3. Script to unpack /dist into top level dir for github pages project. (grunt
   build CDNifies everything into /dist)
+
+4. Make a wiki page for all the resource files
+
+5. Version 1.0! :D
 
 ## Build & development
 
