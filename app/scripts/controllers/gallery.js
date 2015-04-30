@@ -8,6 +8,6 @@
  * Controller of the artistBaseApp
  */
 angular.module('artistBaseApp')
-  .controller('GalleryFsCtrl', function ($scope) {
+  .controller('GalleryCtrl', function ($scope, $routeParams) {
     $scope.title = 'Works for Sale';
   });
