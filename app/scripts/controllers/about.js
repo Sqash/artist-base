@@ -20,6 +20,7 @@ angular.module('artistBaseApp')
       if(data) {
         $scope.content = data.content;
         $scope.events = data.events;
+        $scope.support = data.support;
       } else {
         $scope.content = 'There was an error somewhere in the resource file' +
           'about.json. Probably a syntax error! Uh oh.';

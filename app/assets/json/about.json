@@ -1,5 +1,9 @@
 {
   "content": "This can be a super long description string full of anything you want! Even HTML I'm pretty sure. It describes you in more detail for people who want to know about you and what you do.",
+  "support": {
+    "title": "Support the Artist",
+    "description": "This can be a little paragraph of something detailing how people can support your work, monetarily or otherwise. You can add donate, etc. buttons below it in the file 'app/views/about.html'. It's commented a commented area for you."
+  },
   "events": [
     {
       "title": "Example1",
