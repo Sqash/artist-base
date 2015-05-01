@@ -1,4 +1,24 @@
 <div class="container text-center">
   <h1 class="text-center">{{galleryTitle}}</h1>
   <p>{{galleryDescription}}</p>
+
+  <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+    <!-- Indicators --><!-- end Indicators -->
+    <!-- Items -->
+    <div class="carousel-inner" ng-repeat="w in works">
+      <div class="item active">
+        <img ng-src="assets/images/galleries/{{galleryName}}/{{w.image}}"
+          alt="image not found"></img>
+        <h3>{{w.title}} <i>{{w.price}}</i></h3>
+        <p>{{w.description}}</p>
+      </div>
+    </div><!-- end Items -->
+    <!-- Nav -->
+    <a class="carousel-control left" href="#galleryCarousel" data-slide="prev">
+      <span class="glyphicon glyphicon-chevron-left"></span>
+    </a>
+    <a class="carousel-control right" href="#galleryCarousel" data-slide="next">
+      <span class="glyphicon glyphicon-chevron-right"></span>
+    </a>
+  </div>
 </div>
