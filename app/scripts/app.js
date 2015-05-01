@@ -25,9 +25,9 @@ angular
         templateUrl: 'views/about.html',
         controller: 'AboutCtrl'
       })
-      .when('/gallery-fs', {
-        templateUrl: 'views/gallery-fs.html',
-        controller: 'GalleryFsCtrl'
+      .when('/gallery/:title', {
+        templateUrl: 'views/gallery.html',
+        controller: 'GalleryCtrl'
       })
       .otherwise({
         redirectTo: '/'

@@ -4,6 +4,10 @@
   position: relative;
 }
 
+#mainView {
+  padding-bottom: 5rem;
+}
+
 .footer {
   border-top: 2px dashed #AAA;
   position: absolute;
