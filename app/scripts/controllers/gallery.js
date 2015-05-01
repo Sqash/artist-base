@@ -18,13 +18,13 @@ angular.module('artistBaseApp')
       $scope.works[$scope.activeWork++].active = false;
       $scope.activeWork = ($scope.activeWork > $scope.works.length - 1)? 0 : $scope.activeWork;
       $scope.works[$scope.activeWork].active = true;
-    }
+    };
 
     $scope.prev = function() {
       $scope.works[$scope.activeWork--].active = false;
       $scope.activeWork = ($scope.activeWork < 0)? $scope.works.length - 1 : $scope.activeWork;
       $scope.works[$scope.activeWork].active = true;
-    }
+    };
 
     $http.get('assets/json/' + $routeParams.title + '.json', {
       cache: true,

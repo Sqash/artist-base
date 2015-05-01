@@ -47,18 +47,17 @@ then it's on to making all of that populate from a json resource file.
 
 ## //TODO (notes for me)
 
-1. Carousel galleries
-  - Determine whether ng or bootstrap.
-  - Make it a component/service.
+1. Paypal hooks
 
-2. Paypal hooks
-
-3. Script to unpack /dist into top level dir for github pages project. (grunt
+2. Script to unpack /dist into top level dir for github pages project. (grunt
   build CDNifies everything into /dist)
 
-4. Make a wiki page for all the resource files
+3. Make a wiki page for all the resource files
 
-5. Version 1.0! :D
+4. Add animation to the gallery carousels and collapsed navbar slidedown. It
+   would make it look much nicer by default.
+
+4. Version 1.0! :D
 
 ## Build & development
 
