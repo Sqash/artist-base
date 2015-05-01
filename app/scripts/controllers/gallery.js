@@ -12,6 +12,20 @@ angular.module('artistBaseApp')
 
     $scope.galleryName = $routeParams.title;
 
+    $scope.activeWork = 0;
+
+    $scope.next = function() {
+      $scope.works[$scope.activeWork++].active = false;
+      $scope.activeWork = ($scope.activeWork > $scope.works.length - 1)? 0 : $scope.activeWork;
+      $scope.works[$scope.activeWork].active = true;
+    }
+
+    $scope.prev = function() {
+      $scope.works[$scope.activeWork--].active = false;
+      $scope.activeWork = ($scope.activeWork < 0)? $scope.works.length - 1 : $scope.activeWork;
+      $scope.works[$scope.activeWork].active = true;
+    }
+
     $http.get('assets/json/' + $routeParams.title + '.json', {
       cache: true,
       responseType: 'json'
@@ -21,6 +35,7 @@ angular.module('artistBaseApp')
         $scope.galleryTitle = data.title;
         $scope.galleryDescription = data.description;
         $scope.works = data.works;
+        $scope.works[0].active = true;
       } else {
         $scope.galleryTitle = 'Error ):';
         $scope.galleryDescription = 'There seems to be a problem with your ' +

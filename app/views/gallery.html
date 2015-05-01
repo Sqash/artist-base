@@ -6,18 +6,18 @@
     <!-- Indicators --><!-- end Indicators -->
     <!-- Items -->
     <div class="carousel-inner" ng-repeat="w in works">
-      <div class="item active">
+      <div class="item" ng-class="{active: w.active}">
         <img ng-src="assets/images/galleries/{{galleryName}}/{{w.image}}"
-          alt="image not found"></img>
+          alt="image not found" class="img-responsive center-block"></img>
         <h3>{{w.title}} <i>{{w.price}}</i></h3>
         <p>{{w.description}}</p>
       </div>
     </div><!-- end Items -->
     <!-- Nav -->
-    <a class="carousel-control left" href="#galleryCarousel" data-slide="prev">
+    <a class="carousel-control left" ng-click="prev()">
       <span class="glyphicon glyphicon-chevron-left"></span>
     </a>
-    <a class="carousel-control right" href="#galleryCarousel" data-slide="next">
+    <a class="carousel-control right" ng-click="next()">
       <span class="glyphicon glyphicon-chevron-right"></span>
     </a>
   </div>
