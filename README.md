@@ -47,17 +47,15 @@ then it's on to making all of that populate from a json resource file.
 
 ## //TODO (notes for me)
 
-1. Paypal hooks
-
-2. Script to unpack /dist into top level dir for github pages project. (grunt
+1. Script to unpack /dist into top level dir for github pages project. (grunt
   build CDNifies everything into /dist)
 
-3. Make a wiki page for all the resource files
+2. Make a wiki page for all the resource files
 
-4. Add animation to the gallery carousels and collapsed navbar slidedown. It
+3. Add animation to the gallery carousels and collapsed navbar slidedown. It
    would make it look much nicer by default.
 
-4. Version 1.0! :D
+5. Version 1.0! :D
 
 ## Build & development
 
