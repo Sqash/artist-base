@@ -1,0 +1,27 @@
+{
+  "title": "Works for Sale <<example>>",
+  "description": "This is an example description for the gallery. It could be something like how to contact and pay you if someone is interested",
+  "works": [
+    {
+      "title": "Clipart I Found <<example>>",
+      "image": "Eyes-of-woman-clipart.jpg",
+      "medium": "Laziness on Internet",
+      "price": "$0.00",
+      "description": "I'm sure your art will be much better!"
+    },
+    {
+      "title": "Great Stove <<example>>",
+      "image": "stove-197208_640.png",
+      "medium": "Laziness on Internet",
+      "price": "-$0.00",
+      "description": "This is also an example"
+    },
+    {
+      "title": "Teacup Grande <<example>>",
+      "image": "Teacup_clipart.svg",
+      "medium": "Laziness on Internet",
+      "price": "$0.00",
+      "description": "Last one I promise."
+    }
+  ]
+}
