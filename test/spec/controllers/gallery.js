@@ -1,22 +1,22 @@
 'use strict';
 
-describe('Controller: SidebarCtrl', function () {
+describe('Controller: GalleryCtrl', function () {
 
   // load the controller's module
   beforeEach(module('artistBaseApp'));
 
-  var SidebarCtrl,
+  var GalleryFsCtrl,
     scope;
 
   // Initialize the controller and a mock scope
   beforeEach(inject(function ($controller, $rootScope) {
     scope = $rootScope.$new();
-    SidebarCtrl = $controller('SidebarCtrl', {
+    GalleryFsCtrl = $controller('GalleryCtrl', {
       $scope: scope
     });
   }));
 
-  it('should attach a list of awesomeThings to the scope', function () {
-    expect(scope.awesomeThings.length).toBe(3);
+  it('should have a dummy test until I write async tests', function () {
+    expect(1).toBe(1);
   });
 });
