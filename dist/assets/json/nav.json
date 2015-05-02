@@ -1,0 +1,23 @@
+{
+  "menuItems":
+  [
+    {
+      "title": "Home",
+      "link": "/"
+    },
+    {
+      "title": "About",
+      "link": "/about"
+    },
+    {
+      "title": "Works for Sale",
+      "link": "/gallery/for-sale"
+    },
+    {
+      "title": "Exhibit",
+      "link": "/gallery/exhibit"
+    }
+  ],
+  "branding": "artistBase",
+  "brandIsImage": false
+}
