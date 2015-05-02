@@ -205,7 +205,8 @@ module.exports = function (grunt) {
         src: [
           '<%= yeoman.dist %>/scripts/{,*/}*.js',
           '<%= yeoman.dist %>/styles/{,*/}*.css',
-          '<%= yeoman.dist %>/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          //'<%= yeoman.dist %>/assets/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+          // ^That makes all the json manifest urls (ie. all) break.
           '<%= yeoman.dist %>/styles/fonts/*'
         ]
       }
@@ -237,7 +238,7 @@ module.exports = function (grunt) {
       options: {
         assetsDirs: [
           '<%= yeoman.dist %>',
-          '<%= yeoman.dist %>/images',
+          //'<%= yeoman.dist %>/assets',
           '<%= yeoman.dist %>/styles'
         ]
       }
@@ -273,9 +274,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.{png,jpg,jpeg,gif}',
-          dest: '<%= yeoman.dist %>/images'
+          cwd: '<%= yeoman.app %>/assets/images',
+          src: '{,*/}{,*/}*.{png,jpg,jpeg,gif}',
+          dest: '<%= yeoman.dist %>/assets/images'
         }]
       }
     },
@@ -284,9 +285,9 @@ module.exports = function (grunt) {
       dist: {
         files: [{
           expand: true,
-          cwd: '<%= yeoman.app %>/images',
-          src: '{,*/}*.svg',
-          dest: '<%= yeoman.dist %>/images'
+          cwd: '<%= yeoman.app %>/assets/images',
+          src: '{,*/}{,*/}*.svg',
+          dest: '<%= yeoman.dist %>/assets/images'
         }]
       }
     },
@@ -342,13 +343,13 @@ module.exports = function (grunt) {
             '.htaccess',
             '*.html',
             'views/{,*/}*.html',
-            'images/{,*/}*.{webp}',
+            'assets/{,*/}*.{webp,json}',
             'styles/fonts/{,*/}*.*'
           ]
         }, {
           expand: true,
-          cwd: '.tmp/images',
-          dest: '<%= yeoman.dist %>/images',
+          cwd: '.tmp/assets',
+          dest: '<%= yeoman.dist %>/assets',
           src: ['generated/*']
         }, {
           expand: true,
