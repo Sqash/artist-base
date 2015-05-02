@@ -5,29 +5,28 @@ public!
 
 You can:
 
-- populate up to 2 galleries --intended as works for sale and
-works not for sale but that you want to show off--
-- There's a home page where you can put down a little blurb about you
-- There's a hook-able newsfeed of things that you're getting up to or have
-gotten up to in your art life
-- A bio page for a more in-depth expose of yourself
-- A couple hook pages that you can use to allow people to donate to/pay you for
-all the awesome things you've done!
+- Make a cool looking front page with your name in big letters!
+- Set up a blurb about you and also notify people about what you're up to on
+  the About page.
+- put scripts for donate and/or payment buttons on the About page to get $$$
+- Hook up (theoretically) an infinite number of galleries that are
+  customizable to whatever you want them to display!
 
 All the content of the site is modular and easy to populate for the
-non-technically savvy of you so you should never have to code anything!
+non-technically savvy of should never have to code anything! (JSON doesn't
+count. There will be a really handy guide page in the Wiki soon)
 
 The default appearance of the site should be eye pleasing and also
 mobile-friendly.
 
 Instructions on how to take this and make your very own copy for your very own
-works are under the heading //TODO later in this document
+works are going to be in the project Wiki soon!
 
 ##IMPORTANT NOTE
 
 This app is not yet at version 1.0.0 which means it is incomplete and (in my
-opinion) not ready for consumption. Should be fully ready by mid May (2015) so
-check back!
+opinion) not ready for consumption. Should be fully ready soon though, so check
+back!
 
 ##Authorship
 
@@ -41,9 +40,8 @@ See the file `LICENSE` for full license
 
 ## Left off at (notes for me):
 
-Started on galleries. Working on populating the view and controller with the
-right values. Then, we're getting on to inserting the carousel html in the view
-then it's on to making all of that populate from a json resource file.
+Fixed bugs in the Gruntfile. Working on making/finding a nice script to push
+the dist directory right to gh-pages
 
 ## //TODO (notes for me)
 
@@ -54,6 +52,8 @@ then it's on to making all of that populate from a json resource file.
 
 3. Add animation to the gallery carousels and collapsed navbar slidedown. It
    would make it look much nicer by default.
+
+4. Write actual unit tests for all controllers (using $httpBackend I think)
 
 5. Version 1.0! :D
 
