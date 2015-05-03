@@ -45,21 +45,22 @@ the dist directory right to gh-pages
 
 ## //TODO (notes for me)
 
-1. Script to unpack /dist into top level dir for github pages project. (grunt
-  build CDNifies everything into /dist)
+1. Make a wiki page for all the resource files
 
-2. Make a wiki page for all the resource files
-
-3. Add animation to the gallery carousels and collapsed navbar slidedown. It
+2. Add animation to the gallery carousels and collapsed navbar slidedown. It
    would make it look much nicer by default.
 
-4. Write actual unit tests for all controllers (using $httpBackend I think)
+3. Write actual unit tests for all controllers (using $httpBackend I think)
 
-5. Version 1.0! :D
+4. Version 1.0! :D
 
 ## Build & development
 
 Run `grunt` for building and `grunt serve` for preview.
+
+Run `grunt build` to ready the `dist` directory for gh-pages
+
+Run `./push-dist` to push the latest `dist` build to the `gh-pages` branch
 
 ## Testing
 
