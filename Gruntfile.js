@@ -378,6 +378,17 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+      pagestest: {
+        options: {
+          dir: 'dist',
+          commit: true,
+          branch: 'test-dist',
+          message: 'Built from branch %sourceBranch% @commit %sourceCommit%'
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -446,9 +457,14 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'processhtml:dist',
     'htmlmin'
   ]);
+
+  grunt.registerTask('push-dist', [
+    'processhtml:dist',
+    'buildcontrol:pagestest'
+  ]);
+
 
   grunt.registerTask('default', [
     'newer:jshint',
