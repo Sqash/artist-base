@@ -379,11 +379,14 @@ module.exports = function (grunt) {
     },
 
     buildcontrol: {
-      pagestest: {
+      pages: {
         options: {
           dir: 'dist',
           commit: true,
           branch: 'test-dist',
+          push: true,
+          remote: 'https://github.com/Sqash/artist-base.git',
+          remoteBranch: 'gh-pages',
           message: 'Built from branch %sourceBranch% @commit %sourceCommit%'
         }
       }
@@ -462,7 +465,7 @@ module.exports = function (grunt) {
 
   grunt.registerTask('push-dist', [
     'processhtml:dist',
-    'buildcontrol:pagestest'
+    'buildcontrol:pages'
   ]);
 
 
