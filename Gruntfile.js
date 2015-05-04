@@ -366,6 +366,18 @@ module.exports = function (grunt) {
       }
     },
 
+    //parse HTML pages for links etc. that will break on gh-pages
+    processhtml: {
+      dist: {
+        options: {
+          commentMarker: 'procHTML'
+        },
+        files: {
+          '<%= yeoman.dist %>/index.html': ['<%= yeoman.dist %>/index.html']
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -434,6 +446,7 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
+    'processhtml:dist',
     'htmlmin'
   ]);
 
