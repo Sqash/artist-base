@@ -21,13 +21,16 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
-  var commitmessage = grunt.option('message');
+  var message = grunt.option('message');
 
   // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
     yeoman: appConfig,
+
+    //Commandline options
+    pushMsg: message,
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -385,12 +388,12 @@ module.exports = function (grunt) {
         options: {
           dir: 'dist',
           commit: true,
-          branch: 'test-dist',
+          branch: 'dist',
           push: true,
           remote: 'https://github.com/Sqash/artist-base.git',
           remoteBranch: 'gh-pages',
           // force: true,
-          message: 'Built from branch %sourceBranch% @commit %sourceCommit%: <%= commitmessage %>'
+          message: 'Built from branch %sourceBranch% @commit %sourceCommit%: %pushMsg%'
         }
       }
     },
