@@ -21,6 +21,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  var commitmessage = grunt.option('message');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
@@ -388,7 +390,7 @@ module.exports = function (grunt) {
           remote: 'https://github.com/Sqash/artist-base.git',
           remoteBranch: 'gh-pages',
           // force: true,
-          message: 'Built from branch %sourceBranch% @commit %sourceCommit%'
+          message: 'Built from branch %sourceBranch% @commit %sourceCommit%: <%= commitmessage %>'
         }
       }
     },
