@@ -387,6 +387,7 @@ module.exports = function (grunt) {
           push: true,
           remote: 'https://github.com/Sqash/artist-base.git',
           remoteBranch: 'gh-pages',
+          force: true,
           message: 'Built from branch %sourceBranch% @commit %sourceCommit%'
         }
       }
