@@ -10,6 +10,10 @@
         <img ng-src="assets/images/galleries/{{galleryName}}/{{w.image}}"
           alt="image not found" class="img-responsive center-block"></img>
         <h3>{{w.title}} <i>{{w.price}}</i></h3>
+        <h6>
+          Medium: {{w.medium}}
+          <span ng-show="w.size">&nbsp;&nbsp;&nbsp;&nbsp;({{w.size}})</span>
+        </h6>
         <p>{{w.description}}</p>
       </div>
     </div><!-- end Items -->
