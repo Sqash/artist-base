@@ -40,8 +40,7 @@ See the file `LICENSE` for full license
 
 ## Left off at (notes for me):
 
-Fixed bugs in the Gruntfile. Working on making/finding a nice script to push
-the dist directory right to gh-pages
+Was making wiki pages. about is done, home is done. Needs more!
 
 ## //TODO (notes for me)
 
