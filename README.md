@@ -44,14 +44,11 @@ Was making wiki pages. about is done, home is done. Needs more!
 
 ## //TODO (notes for me)
 
-1. Make a wiki page for all the resource files
+1. Write actual unit tests for all controllers (using $httpBackend I think)
 
-2. Add animation to the gallery carousels and collapsed navbar slidedown. It
-   would make it look much nicer by default.
+2. Make a wiki page for cloning, setup, and push to IO
 
-3. Write actual unit tests for all controllers (using $httpBackend I think)
-
-4. Version 1.0! :D
+3. Version 1.0! :D
 
 ## Build & development
 
