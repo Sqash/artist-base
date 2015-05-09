@@ -26,6 +26,7 @@
 
 .footer p {
   margin: 10px 0;
+  text-align: center;
 }
 
 .footer .ab-brand {
@@ -33,4 +34,10 @@
   right: 0;
   font-size: 1.2rem;
   font-style: italic;
+}
+
+@media screen and (max-width: 767px) {
+  .footer p {
+    text-align: left;
+  }
 }
