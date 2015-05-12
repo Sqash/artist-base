@@ -14,6 +14,8 @@ angular.module('artistBaseApp')
 
     $scope.activeWork = 0;
 
+    $scope.show = true;
+
     $scope.next = function() {
       $scope.works[$scope.activeWork++].active = false;
       $scope.activeWork = ($scope.activeWork > $scope.works.length - 1)? 0 : $scope.activeWork;
@@ -35,7 +37,9 @@ angular.module('artistBaseApp')
         $scope.galleryTitle = data.title;
         $scope.galleryDescription = data.description;
         $scope.works = data.works;
-        $scope.works[0].active = true;
+        for(var i=0; i < $scope.works.length; i++) {
+          $scope.works[i].active = (i === $scope.activeWork);
+        }
       } else {
         $scope.galleryTitle = 'Error ):';
         $scope.galleryDescription = 'There seems to be a problem with your ' +
