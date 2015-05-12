@@ -1,0 +1,41 @@
+/* Notes on progress:
+ *
+ * Captions fit the whole image. Off by default. Descriptions now line up at
+ * the bottom, but if they're too long they overflow and because the p doesn't
+ * have an explicit height overflow-y can't generate a scrollbar.
+ * Explicit height causes the p to render in the middle as opposed to from the
+ * bottom.
+ *
+ */
+
+#gallery > h1 {
+  margin-top: 0;
+}
+
+.carousel-caption {
+  color: #EEE;
+  background: rgba(0, 0, 0, 0.5);
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 10px 15%;
+  opacity: 1;
+  -webkit-transition: opacity linear 0.2s;
+  -moz-transition: opacity linear 0.2s;
+  -o-transition: opacity linear 0.2s;
+  transition: opacity linear 0.2s;
+}
+
+.carousel-caption > *:last-child {
+  word-wrap: break-word;
+  position: absolute;
+  bottom: 0;
+  left: 15%;
+  right: 15%;
+  max-height: 40%;
+}
+
+.carousel-caption.op0 {
+  opacity: 0;
+}
