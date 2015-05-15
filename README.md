@@ -40,11 +40,11 @@ See the file `LICENSE` for full license
 
 ## Left off at (notes for me):
 
-Was making wiki pages. about is done, home is done. Needs more!
+Was making wiki pages and unit tests. All CSS issues seem to be cleared up.
 
 ## //TODO (notes for me)
 
-1. Write actual unit tests for all controllers (using $httpBackend I think)
+1. Finish writing unit tests
 
 2. Make a wiki page for cloning, setup, and push to IO
 
@@ -60,4 +60,5 @@ Run `./push-dist` to push the latest `dist` build to the `gh-pages` branch
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+Running `grunt test` will run the unit tests with karma. They will test with
+the JSON files used in the app, not dummy data.
