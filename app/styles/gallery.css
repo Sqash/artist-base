@@ -12,6 +12,14 @@
   margin-top: 0;
 }
 
+.carousel-inner {
+  z-index: 0;
+}
+
+.carousel-control {
+  z-index: 1;
+}
+
 .carousel-caption {
   color: #EEE;
   background: rgba(0, 0, 0, 0.5);
@@ -34,6 +42,7 @@
   left: 15%;
   right: 15%;
   max-height: 40%;
+  overflow-y: auto;
 }
 
 .carousel-caption.op0 {
