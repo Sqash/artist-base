@@ -14,7 +14,7 @@ module.exports = function(config) {
     basePath: '../',
 
     // testing framework to use (jasmine/mocha/qunit/...)
-    frameworks: ['jasmine'],
+    frameworks: ['jasmine-jquery','jasmine'],
 
     // list of files / patterns to load in the browser
     files: [
@@ -29,7 +29,14 @@ module.exports = function(config) {
       // endbower
       'app/scripts/**/*.js',
       'test/mock/**/*.js',
-      'test/spec/**/*.js'
+      'test/spec/**/*.js',
+      // JSON fixture
+      {
+        pattern: 'app/assets/json/*.json',
+        watched: true,
+        served: true,
+        included: false
+      }
     ],
 
     // list of files / patterns to exclude
@@ -54,7 +61,8 @@ module.exports = function(config) {
     // Which plugins to enable
     plugins: [
       'karma-phantomjs-launcher',
-      'karma-jasmine'
+      'karma-jasmine',
+      'karma-jasmine-jquery'
     ],
 
     // Continuous Integration mode
