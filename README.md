@@ -48,7 +48,13 @@ Was making wiki pages and unit tests. All CSS issues seem to be cleared up.
 
 2. Make a wiki page for cloning, setup, and push to IO
 
-3. Version 1.0! :D
+3. Change gruntfile to push with 'buildcontrol' task to a variable
+   interpolateable remote.
+
+4. Make gitattributes change the merge behaviour when pulling from remotes to
+   keep current config/image/asset files
+
+5. Version 1.0! :D
 
 ## Build & development
 
