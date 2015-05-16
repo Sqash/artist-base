@@ -9,7 +9,7 @@
       <div class="item" ng-repeat="w in works" ng-class="{active: w.active}">
         <img ng-src="assets/images/galleries/{{galleryName}}/{{w.image}}"
           alt="image not found" class="img-responsive center-block"></img>
-        <div class="carousel-caption" ng-class="{op0: show}">
+        <div class="carousel-caption" ng-class="{show: show}">
           <h4>{{w.title}} <i>{{w.price}}</i></h4>
           <h6>
             Medium: {{w.medium}}

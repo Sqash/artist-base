@@ -14,7 +14,7 @@ angular.module('artistBaseApp')
 
     $scope.activeWork = 0;
 
-    $scope.show = true;
+    $scope.show = false;
 
     $scope.next = function() {
       $scope.works[$scope.activeWork++].active = false;

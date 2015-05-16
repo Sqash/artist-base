@@ -28,7 +28,7 @@
   bottom: 0;
   left: 0;
   padding: 10px 15%;
-  opacity: 1;
+  opacity: 0;
   -webkit-transition: opacity linear 0.2s;
   -moz-transition: opacity linear 0.2s;
   -o-transition: opacity linear 0.2s;
@@ -45,6 +45,6 @@
   overflow-y: auto;
 }
 
-.carousel-caption.op0 {
-  opacity: 0;
+.carousel-caption.show {
+  opacity: 1;
 }
