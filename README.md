@@ -38,23 +38,27 @@ GPL-2.0
 
 See the file `LICENSE` for full license
 
-## Left off at (notes for me):
+## //TODO
 
-Was making wiki pages and unit tests. All CSS issues seem to be cleared up.
-
-## //TODO (notes for me)
+### v0.0.4
 
 1. Finish writing unit tests
 
-2. Make a wiki page for cloning, setup, and push to IO
+2. Hunt down and fix app bugs
 
-3. Change gruntfile to push with 'buildcontrol' task to a variable
+### v0.0.5
+
+1. Make a wiki page for cloning, setup, and push to IO
+
+2. Change gruntfile to push with 'buildcontrol' task to a variable
    interpolateable remote.
 
-4. Make gitattributes change the merge behaviour when pulling from remotes to
+3. Make gitattributes change the merge behaviour when pulling from remotes to
    keep current config/image/asset files
 
-5. Version 1.0! :D
+### v0.0.6
+
+1. Add fullsize view functionality to gallery pictures
 
 ## Build & development
 
