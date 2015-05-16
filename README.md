@@ -38,21 +38,27 @@ GPL-2.0
 
 See the file `LICENSE` for full license
 
-## Left off at (notes for me):
+## //TODO
 
-Fixed bugs in the Gruntfile. Working on making/finding a nice script to push
-the dist directory right to gh-pages
+### v0.0.4
 
-## //TODO (notes for me)
+1. Finish writing unit tests
 
-1. Make a wiki page for all the resource files
+2. Hunt down and fix app bugs
 
-2. Add animation to the gallery carousels and collapsed navbar slidedown. It
-   would make it look much nicer by default.
+### v0.0.5
 
-3. Write actual unit tests for all controllers (using $httpBackend I think)
+1. Make a wiki page for cloning, setup, and push to IO
 
-4. Version 1.0! :D
+2. Change gruntfile to push with 'buildcontrol' task to a variable
+   interpolateable remote.
+
+3. Make gitattributes change the merge behaviour when pulling from remotes to
+   keep current config/image/asset files
+
+### v0.0.6
+
+1. Add fullsize view functionality to gallery pictures
 
 ## Build & development
 
@@ -64,4 +70,5 @@ Run `./push-dist` to push the latest `dist` build to the `gh-pages` branch
 
 ## Testing
 
-Running `grunt test` will run the unit tests with karma.
+Running `grunt test` will run the unit tests with karma. They will test with
+the JSON files used in the app, not dummy data.
