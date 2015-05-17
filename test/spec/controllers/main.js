@@ -11,6 +11,59 @@ describe('Controller: MainCtrl', function () {
     jasmine.getFixtures().fixturesPath = 'base/app/assets/json/';
     var data = readFixtures('home.json');
     json = JSON.parse(data);
+
+    jasmine.addMatchers({
+      toBeOneOf: function(util, customEqualityTesters) {
+        return {
+          compare: function(actual, expected) {
+            var result = {};
+
+            if(expected === undefined){
+              result.pass = false;
+              return result;
+            }
+
+            result.pass=util.contains(expected, actual, customEqualityTesters);
+
+            if(!result.pass) {
+              result.message = 'Expected ' + actual.constructor.name +
+                ' to match one of [' + expected + '] types';
+            }
+
+            return result;
+          }
+        }
+      },
+      toHaveOneOf: function(util, customEqualityTesters) {
+        return {
+          compare: function(actual, expected) {
+            var result = {};
+
+            if(expected === undefined) {
+              expected = [];
+            }
+
+            result.pass = false;
+
+            for(var i=0; i<expected.length; i++){
+              if(actual.hasOwnProperty(expected[i]) &&
+                  (expected[i] !== undefined)) {
+                result.pass = true;
+              }
+            }
+
+            if(!result.pass) {
+              result.message = 'Expected ' + actual.constructor.name +
+                ' to have at least one of [' + expected +
+                '] properties defined.';
+            }
+
+            return result;
+          }
+        }
+      }
+    });
+
   });
 
   // Initialize the controller and a mock scope
@@ -26,30 +79,15 @@ describe('Controller: MainCtrl', function () {
   }));
 
   it('should have a string value for artist, if defined', function() {
-    if(scope.artist) {
-      expect(scope.artist).toEqual(jasmine.any(String))
-    } else {
-      console.log('Artist undefined in home.json file');
-      return true;
-    }
+    expect(scope.artist).toBeOneOf([jasmine.any(String), undefined]);
   });
 
   it('should have a string value for tagline, if defined', function() {
-    if(scope.tagline) {
-      expect(scope.tagline).toEqual(jasmine.any(String))
-    } else {
-      console.log('Tagline undefined in home.json file');
-      return true;
-    }
+    expect(scope.tagline).toBeOneOf([jasmine.any(String), undefined]);
   });
 
   it('should have a string value for description, if defined', function() {
-    if(scope.description) {
-      expect(scope.description).toEqual(jasmine.any(String))
-    } else {
-      console.log('Tagline undefined in home.json file');
-      return true;
-    }
+    expect(scope.description).toBeOneOf([jasmine.any(String), undefined]);
   });
 
 });
