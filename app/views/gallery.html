@@ -1,16 +1,22 @@
-<div class="container text-center">
+<div id="gallery" class="container text-center">
   <h1 class="text-center">{{galleryTitle}}</h1>
   <p>{{galleryDescription}}</p>
 
-  <div id="galleryCarousel" class="carousel slide" data-ride="carousel">
+  <div id="galleryCarousel" class="carousel slide">
     <!-- Indicators --><!-- end Indicators -->
     <!-- Items -->
-    <div class="carousel-inner" ng-repeat="w in works">
-      <div class="item" ng-class="{active: w.active}">
+    <div class="carousel-inner" ng-click="show=!show">
+      <div class="item" ng-repeat="w in works" ng-class="{active: w.active}">
         <img ng-src="assets/images/galleries/{{galleryName}}/{{w.image}}"
           alt="image not found" class="img-responsive center-block"></img>
-        <h3>{{w.title}} <i>{{w.price}}</i></h3>
-        <p>{{w.description}}</p>
+        <div class="carousel-caption" ng-class="{show: show}">
+          <h4>{{w.title}} <i>{{w.price}}</i></h4>
+          <h6>
+            Medium: {{w.medium}}
+            <span ng-show="w.size">&nbsp;&nbsp;&nbsp;&nbsp;({{w.size}})</span>
+          </h6>
+          <p>{{w.description}}</p>
+        </div>
       </div>
     </div><!-- end Items -->
     <!-- Nav -->

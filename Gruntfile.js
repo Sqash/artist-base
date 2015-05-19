@@ -21,11 +21,16 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  var message = grunt.option('message');
+
   // Define the configuration for all the tasks
   grunt.initConfig({
 
     // Project settings
     yeoman: appConfig,
+
+    //Commandline options
+    pushMsg: message,
 
     // Watches files for changes and runs tasks based on the changed files
     watch: {
@@ -378,6 +383,21 @@ module.exports = function (grunt) {
       }
     },
 
+    buildcontrol: {
+      pages: {
+        options: {
+          dir: 'dist',
+          commit: true,
+          branch: 'dist',
+          push: true,
+          remote: 'https://github.com/Sqash/artist-base.git',
+          remoteBranch: 'gh-pages',
+          // force: true,
+          message: 'Built from branch %sourceBranch% @commit %sourceCommit%: <%= pushMsg %>'
+        }
+      }
+    },
+
     // Run some tasks in parallel to speed up the build process
     concurrent: {
       server: [
@@ -446,9 +466,14 @@ module.exports = function (grunt) {
     'uglify',
     'filerev',
     'usemin',
-    'processhtml:dist',
     'htmlmin'
   ]);
+
+  grunt.registerTask('push-dist', [
+    'processhtml:dist',
+    'buildcontrol:pages'
+  ]);
+
 
   grunt.registerTask('default', [
     'newer:jshint',

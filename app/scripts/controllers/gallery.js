@@ -8,11 +8,14 @@
  * Controller of the artistBaseApp
  */
 angular.module('artistBaseApp')
-  .controller('GalleryCtrl', function ($scope, $http, $routeParams) {
+  .controller('GalleryCtrl', function ($scope, $http, $routeParams, $location,
+        $timeout) {
 
     $scope.galleryName = $routeParams.title;
 
     $scope.activeWork = 0;
+
+    $scope.show = false;
 
     $scope.next = function() {
       $scope.works[$scope.activeWork++].active = false;
@@ -35,7 +38,9 @@ angular.module('artistBaseApp')
         $scope.galleryTitle = data.title;
         $scope.galleryDescription = data.description;
         $scope.works = data.works;
-        $scope.works[0].active = true;
+        for(var i=0; i < $scope.works.length; i++) {
+          $scope.works[i].active = (i === $scope.activeWork);
+        }
       } else {
         $scope.galleryTitle = 'Error ):';
         $scope.galleryDescription = 'There seems to be a problem with your ' +
@@ -43,9 +48,11 @@ angular.module('artistBaseApp')
       }
     })
     .error(function() {
-      $scope.galleryTitle = 'Error ):';
-      $scope.galleryDescription = 'Couldn\'t find your ' + $routeParams.title +
-        '.json gallery manifest file. It should be in assets/json/';
+      $scope.galleryTitle = 'Gallery "' + $routeParams.title + '" does not exist';
+      $scope.galleryDescription = 'redirecting to home...';
+      $timeout(function() {
+        $location.url('/');
+      }, 3000);
     });
 
   });
