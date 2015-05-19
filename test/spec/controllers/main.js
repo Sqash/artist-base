@@ -9,7 +9,7 @@ describe('Controller: MainCtrl', function () {
 
   beforeAll(function() {
     jasmine.getFixtures().fixturesPath = 'base/app/assets/json/';
-    var data = readFixtures('home.json');
+    var data = jasmine.getFixtures().read('home.json');
     json = JSON.parse(data);
 
     jasmine.addMatchers({
@@ -32,9 +32,9 @@ describe('Controller: MainCtrl', function () {
 
             return result;
           }
-        }
+        };
       },
-      toHaveOneOf: function(util, customEqualityTesters) {
+      toHaveOneOf: function() {
         return {
           compare: function(actual, expected) {
             var result = {};
@@ -60,7 +60,7 @@ describe('Controller: MainCtrl', function () {
 
             return result;
           }
-        }
+        };
       }
     });
 

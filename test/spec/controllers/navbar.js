@@ -9,7 +9,7 @@ describe('Controller: NavbarCtrl', function () {
 
   beforeAll(function() {
     jasmine.getFixtures().fixturesPath = 'base/app/assets/json/';
-    var data = readFixtures('nav.json');
+    var data = jasmine.getFixtures().read('nav.json');
     json = JSON.parse(data);
   });
 

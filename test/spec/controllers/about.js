@@ -8,11 +8,11 @@ describe('Controller: AboutCtrl', function () {
 
   beforeAll(function () {
     jasmine.getFixtures().fixturesPath = 'base/app/assets/json/';
-    var data = readFixtures('about.json');
+    var data = jasmine.getFixtures().read('about.json');
     json = JSON.parse(data);
 
     jasmine.addMatchers({
-      toBeOneOf: function(util, customEqualityTesters) {
+      toBeOneOf: function(util) {
         return {
           compare: function(actual, expected) {
             var result = {};
@@ -22,7 +22,7 @@ describe('Controller: AboutCtrl', function () {
               return result;
             }
 
-            result.pass=util.contains(expected, actual, customEqualityTesters);
+            result.pass=util.contains(expected, actual);
 
             if(!result.pass) {
               result.message = 'Expected ' + actual.constructor.name +
@@ -31,9 +31,9 @@ describe('Controller: AboutCtrl', function () {
 
             return result;
           }
-        }
+        };
       },
-      toHaveOneOf: function(util, customEqualityTesters) {
+      toHaveOneOf: function() {
         return {
           compare: function(actual, expected) {
             var result = {};
@@ -59,7 +59,7 @@ describe('Controller: AboutCtrl', function () {
 
             return result;
           }
-        }
+        };
       }
     });
 

@@ -1,3 +1,5 @@
+/* jshint loopfunc: true */
+
 'use strict';
 
 describe('Controller: GalleryCtrl', function () {
@@ -20,7 +22,7 @@ describe('Controller: GalleryCtrl', function () {
 
       beforeAll(function () {
         jasmine.getFixtures().fixturesPath = 'base/app/assets/json/';
-        var data = readFixtures(filename);
+        var data = jasmine.getFixtures().read(filename);
         json = JSON.parse(data);
 
         jasmine.addMatchers({
@@ -43,9 +45,9 @@ describe('Controller: GalleryCtrl', function () {
 
                 return result;
               }
-            }
+            };
           },
-          toHaveOneOf: function(util, customEqualityTesters) {
+          toHaveOneOf: function() {
             return {
               compare: function(actual, expected) {
                 var result = {};
@@ -71,7 +73,7 @@ describe('Controller: GalleryCtrl', function () {
 
                 return result;
               }
-            }
+            };
           }
         });
 
@@ -108,7 +110,7 @@ describe('Controller: GalleryCtrl', function () {
 
       it('should have a valid image property in every work', function() {
         for(var i=0; i<scope.works.length; i++) {
-          expect(scope.works[i]['image']).toEqual(jasmine.any(String));
+          expect(scope.works[i].image).toEqual(jasmine.any(String));
         }
       });
 
@@ -125,7 +127,7 @@ describe('Controller: GalleryCtrl', function () {
       it('should have exactly 1 active work', function() {
         var count = 0;
         for(var i=0; i<scope.works.length; i++) {
-          if(scope.works[i].active) count++;
+          if(scope.works[i].active) { count++; }
         }
         expect(count).toBe(1);
       });
