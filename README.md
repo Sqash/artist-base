@@ -40,11 +40,11 @@ See the file `LICENSE` for full license
 
 ## //TODO
 
-### v0.0.4
+### *v0.0.4*
 
-1. Finish writing unit tests
+1. *done: Finish writing unit tests*
 
-2. Hunt down and fix app bugs
+2. *done: Hunt down and fix app bugs*
 
 ### v0.0.5
 
