@@ -21,6 +21,8 @@ module.exports = function (grunt) {
     dist: 'dist'
   };
 
+  var pkgJSON = require('./package.json');
+
   var message = grunt.option('message');
 
   // Define the configuration for all the tasks
@@ -28,6 +30,9 @@ module.exports = function (grunt) {
 
     // Project settings
     yeoman: appConfig,
+
+    //package info
+    pkg: pkgJSON,
 
     //Commandline options
     pushMsg: message,
@@ -390,7 +395,8 @@ module.exports = function (grunt) {
           commit: true,
           branch: 'dist',
           push: true,
-          remote: 'https://github.com/Sqash/artist-base.git',
+          //remote: 'https://github.com/Sqash/artist-base.git',
+          remote: ('<%= pkg.repository.url %>.git'),
           remoteBranch: 'gh-pages',
           // force: true,
           message: 'Built from branch %sourceBranch% @commit %sourceCommit%: <%= pushMsg %>'
