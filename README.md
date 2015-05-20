@@ -50,8 +50,8 @@ See the file `LICENSE` for full license
 
 1. Make a wiki page for cloning, setup, and push to IO
 
-2. Change gruntfile to push with 'buildcontrol' task to a variable
-   interpolateable remote.
+2. *done: Change gruntfile to push with 'buildcontrol' task to a variable
+   interpolateable remote. -> (gets data from package.json now)*
 
 3. Make gitattributes change the merge behaviour when pulling from remotes to
    keep current config/image/asset files
