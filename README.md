@@ -66,7 +66,7 @@ Run `grunt` for building and `grunt serve` for preview.
 
 Run `grunt build` to ready the `dist` directory for gh-pages
 
-Run `./push-dist` to push the latest `dist` build to the `gh-pages` branch
+Run `grunt push-dist` to push the latest `dist` build to the `gh-pages` branch
 
 ## Testing
 
