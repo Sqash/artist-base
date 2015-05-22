@@ -1,0 +1,95 @@
+# Purpose of this doc:
+
+To plan the command sequences that will be made runable with grunt to automate
+all tasks relating to git, set-up, updating, and maintaining a clone of this
+app.
+
+The reason these automated commands are being implemented is to make the app
+easy to use and maintain for non-developers that wish to use the app. This is
+critical for the usability of the app.
+
+# Tasks:
+
+## Initial setup
+
+### Use case(s):
+
+New user has followed the setup guide and forked and locally cloned the app
+from **their** repository. They have already installed requisite software
+(git, node, npm, bower, grunt-cli). They have also run `npm install` and
+`bower install`. They are now running this script because I said so and it's
+arcane magic.
+
+### What it will do
+
+- Set up relevant git defaults for them to be able to push/pull from their own
+  repo (by asking questions?)
+
+- Add artist-base as a remote named 'artist-base' or maybe 'upstream'
+
+### Current plan
+
+get inputs:
+
+  - name
+  - email address
+
+configurations:
+
+`git config push.default simple`
+
+`git config --local user.name "<name-var>"`
+
+`git config --local user.email "<email-var>"`
+
+`git remote add upstream https://github.com/sqash/artist-base.git`
+
+## I Changed something / Save Changes
+
+### Use case(s)
+
+User updated their asset files (JSON manifests, pictures, etc.) or maybe messed
+with the HTML, etc. They now want to save those changes in the app (commit them)
+but that should be automated;
+
+### What it will do
+
+- Check for changed files that aren't staged
+
+- Confirm which changes the user wants to keep
+
+- Add those changes to the Staging-area (git add)
+
+- Commit the changes to the repo
+
+### Current plan
+
+- parse `git status` for changed files
+  - for each file: ask Y/n whether they want to save the changes
+    - for each 'n' ask if they want to revert the changes
+    - if 'Y': `git add <file>` (or `git rm <file> if deleted`)
+    - if 'n' then 'Y': `git checkout -- <file>`
+  - `git commit -m "Saved changes on $(date +%F) to: "`
+    - plus ` -m "<filename>, " ` per file changed
+
+## Test changes
+
+Already done: `grunt test` + `grunt serve` and manual visual inspection
+
+## Ready for online view
+
+`grunt build`
+
+## Put online
+
+`grunt push-dist`
+
+*mabye rename this task so it makes sense for non-developers*
+
+## Apply updates from artist-base (if they exist)
+
+### Use case(s)
+
+### What it will do
+
+### Current plan
